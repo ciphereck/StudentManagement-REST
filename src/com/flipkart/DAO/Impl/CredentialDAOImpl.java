@@ -10,7 +10,15 @@ import com.flipkart.constant.SqlQueryConstant;
 import com.flipkart.utils.DBUtil;
 import com.flipkart.utils.MySQLQuery;
 
+/**
+ * @author ciphereck
+ * @category DAO Implementation
+ *
+ */
 public class CredentialDAOImpl implements CredentialDAO {
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public String checkIdentity(String username, String password) throws SQLException {
 		Connection conn = DBUtil.getConnection();
@@ -28,6 +36,9 @@ public class CredentialDAOImpl implements CredentialDAO {
 		return typeOfUser;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public int addUser(String username, String password, String role) throws SQLException {
 		Connection conn = DBUtil.getConnection();
@@ -40,6 +51,9 @@ public class CredentialDAOImpl implements CredentialDAO {
 		return MySQLQuery.executeUpdate(statement);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public int deleteUser(String username) throws SQLException {
 		Connection conn = DBUtil.getConnection();

@@ -1,9 +1,18 @@
 package com.flipkart.constant;
 
+/**
+ * @author ciphereck
+ * @category Constant
+ *
+ */
 public class SqlQueryConstant {
 	public static final String AUTH_CHECK_USERS = "select role from users where username=? and password=?";
 	public static final String ADD_USER = "insert into users (username, password, role) values(?, ?, ?)";
 	public static final String DELETE_USER = "delete from users where username=?";
+	
+	public static final String GET_ROLE = "select * from roles";
+	
+	public static final String GET_PAYMENT_MODE = "select * from payments";
 	
 	public static final String GET_COURSE = "select * from courses";
 	public static final String GET_COURSE_BY_STUDENT = "select courses.*, studentCourses.studentUsername, studentCourses.timeOfLastUpdate from courses inner join  studentCourses on courses.courseId=studentCourses.courseId where studentUsername=?;";

@@ -12,10 +12,19 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.DAO.Impl.CredentialDAOImpl;
 
+/**
+ * @author ciphereck
+ * @category Util
+ *
+ */
 public class DBUtil {
 	private static final Logger logger = Logger.getLogger(DBUtil.class);
 	private static Connection connection = null;
 	
+	/**
+	 * 
+	 * @return Connection of MySql
+	 */
 	public static Connection getConnection() {
 		
         if (connection != null)
