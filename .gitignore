@@ -1,0 +1,8 @@
+bin/
+.idea/
+.settings/
+build/
+.classpath
+.project
+*.iml
+contacts.log
