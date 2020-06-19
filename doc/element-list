@@ -1,0 +1,10 @@
+com.flipkart.constant
+com.flipkart.DAO
+com.flipkart.DAO.Impl
+com.flipkart.exception
+com.flipkart.gateway
+com.flipkart.model
+com.flipkart.rest
+com.flipkart.service
+com.flipkart.utils
+snippet
