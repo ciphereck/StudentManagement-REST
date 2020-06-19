@@ -15,7 +15,7 @@ import com.flipkart.exception.BadCredentialException;
 import com.flipkart.model.Auth;
 import com.flipkart.service.CredentialService;
 
-@Path("auth")
+@Path("/auth")
 public class UserController {
 	CredentialService CredentialService = new CredentialService();
 	Logger logger = Logger.getLogger(UserController.class);

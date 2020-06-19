@@ -26,9 +26,10 @@ import com.flipkart.model.Course;
 import com.flipkart.model.StudentCourse;
 import com.flipkart.model.User;
 import com.flipkart.service.AdminService;
+import com.flipkart.service.ProfessorService;
 import com.flipkart.service.Service;
 
-@Path("admin")
+@Path("/admin")
 public class AdminController {
 	AdminService adminService = new AdminService();
 	Service service = new Service();
@@ -45,7 +46,10 @@ public class AdminController {
 		} catch (SQLException | IllegalRoleException e) {
 			logger.error(e.getMessage());
 		}
-		return Response.status(200).entity(user).build();
+		return Response
+				.status(200)
+				.entity(user)
+				.build();
 	}
 	
 	@PUT
@@ -79,7 +83,9 @@ public class AdminController {
 		} catch (IllegalRoleException | SQLException e) {
 			logger.error(e.getMessage());
 		}
-		return Response.status(200).build();
+		return Response
+				.status(200)
+				.build();
 	}
 	
 	@POST
@@ -137,10 +143,10 @@ public class AdminController {
 	}
 	
 	@DELETE
-	@Path("/course/{username}")
+	@Path("/course/{courseId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes("application/json")
-	public Response deleteCourse(@PathParam("username") String courseId) {
+	public Response deleteCourse(@PathParam("courseId") String courseId) {
 		int res=0;
 		try {
 			res = adminService.deleteCourse(courseId);

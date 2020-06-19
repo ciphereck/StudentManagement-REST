@@ -35,8 +35,8 @@ public class ProfessorService implements UserService {
 	 * @param course
 	 * @throws SQLException
 	 */
-	public void addCouseToTeach(ProfessorCourse course) throws SQLException {
-		professorCourseDAO.addCourseToTeach(course);
+	public int addCouseToTeach(ProfessorCourse course) throws SQLException {
+		return professorCourseDAO.addCourseToTeach(course);
 	}
 	
 	/**
@@ -44,8 +44,8 @@ public class ProfessorService implements UserService {
 	 * @param course
 	 * @throws SQLException
 	 */
-	public void deleteCourseToTeach(ProfessorCourse course) throws SQLException {
-		professorCourseDAO.deleteCourseToTeach(course);
+	public int deleteCourseToTeach(ProfessorCourse course) throws SQLException {
+		return professorCourseDAO.deleteCourseToTeach(course);
 	}
 	
 	/**

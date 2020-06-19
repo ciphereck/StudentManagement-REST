@@ -21,7 +21,7 @@ import com.flipkart.model.User;
 import com.flipkart.service.Service;
 import com.flipkart.service.StudentService;
 
-@Path("student")
+@Path("/student")
 public class StudentController {
 	StudentService studentService = new StudentService();
 	Service service = new Service();
